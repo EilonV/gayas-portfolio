@@ -1,0 +1,138 @@
+.contact-wrapper {
+    padding: 20px;
+
+    .contact {
+        position: relative;
+        width: 100%;
+        gap: 20px;
+
+        form {
+            width: 100%;
+            gap: 10px;
+            height: 200px;
+
+            // height: 200px;
+            * {
+                height: 100%;
+                width: 100% !important;
+            }
+        }
+
+        button,
+        input,
+        textarea {
+            border: none;
+            background-color: transparent;
+            border-radius: 14px;
+            box-shadow: inset 20px 20px 60px #d1c19e,
+                inset -20px -20px 60px #ffffd6;
+            padding: 5px 10px;
+            font-family: Quicksand;
+            font-size: 18px;
+
+            font-weight: 700;
+
+            &::placeholder {
+                font-size: 16px;
+                font-weight: 700;
+            }
+        }
+
+        input {
+            height: 100px;
+        }
+
+        .email-msg {
+            width: 100%;
+            gap: 10px;
+
+            textarea {
+                width: 180% !important;
+                resize: none;
+
+                &::-webkit-scrollbar {
+                    width: 5px;
+                }
+
+                &::-webkit-scrollbar-track {
+                    border-radius: 20px;
+                }
+
+                &::-webkit-scrollbar-thumb {
+                    border-radius: 20px;
+                    // background: #555;
+                }
+            }
+
+            button {
+                text-align: center;
+                font-weight: 700;
+                box-shadow: none;
+                background-color: $black;
+                color: $cream;
+                cursor: pointer;
+                transition: 0.2s;
+
+                &:hover {
+                    background-color: $light-black;
+                    color: $cream;
+                }
+            }
+        }
+    }
+
+    ul {
+        // position: absolute;
+        gap: 10px;
+        transform: translateY(20px);
+
+        // right: 0;
+        // bottom: 0;
+        // height: 100%;
+        li {
+            background-color: white;
+
+            // min-height: 150px;
+            border-radius: 20px 20px 0 0;
+            padding-top: 4px;
+            transition: 0.2s;
+
+            &:hover {
+                background-color: $dark-cream;
+
+                svg {
+                    animation: shake 0.5s 1 ease-in-out;
+                }
+            }
+        }
+
+        svg {
+            fill: $black;
+            height: 40px;
+            padding: 5px;
+            aspect-ratio: 1/1;
+        }
+    }
+}
+
+@keyframes shake {
+    20% {
+        transform: rotate(-10deg);
+    }
+
+    40% {
+        transform: rotate(10deg);
+    }
+
+    60% {
+        transform: rotate(-10deg);
+    }
+
+    80% {
+        transform: rotate(10deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}

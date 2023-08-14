@@ -1,7 +1,7 @@
 import vid from '../assets/vids/gaya-test.mp4'
 
 export const Hero = () => {
-    return <section className="hero flex column justify-center align-center full">
+    return <section id='top' className="hero flex column justify-center align-center full">
         <div className="header-wrapper main-layout">
             <h1>GAYA SHAYO
                 <br />

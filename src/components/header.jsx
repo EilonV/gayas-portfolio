@@ -3,16 +3,16 @@ export const Header = () => {
         <nav className="flex align-center justify-center">
             <ul className="flex align-center justify-center">
                 <li>
-                    <a href="/">link1</a>
+                    <a href="#top">top</a>
                 </li>
                 <li>
-                    <a href="/">link2</a>
+                    <a href="#about">about</a>
                 </li>
                 <li>
-                    <a href="/">link3</a>
+                    <a href="#portfolio">showcase</a>
                 </li>
                 <li>
-                    <a href="/">link4</a>
+                    <a href="#contact">contact</a>
                 </li>
             </ul>
         </nav>

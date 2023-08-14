@@ -1,7 +1,7 @@
 import img from '../../src/assets/images/spray.jpg'
 
 export const About = () => {
-    return <section className="about flex">
+    return <section id='about' className="about flex">
         <h1 className="flex column">
             <div className="about-header-blur">
                 ALL ABOUT
@@ -12,7 +12,7 @@ export const About = () => {
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus quam maiores possimus ab dicta neque velit. Cumque nobis soluta reiciendis neque nesciunt possimus autem laboriosam necessitatibus tenetur? Deserunt, sed quia?</p>
         </h1>
         <div className='flex'>
-            <div className="flex column align-center  justify-center">
+            <div className="flex column align-center justify-center">
                 <h1>ME</h1>
                 <img src={img} alt="gaya shayo pfp" />
             </div>
