@@ -49,6 +49,7 @@
             textarea {
                 width: 180% !important;
                 resize: none;
+                padding: 10px;
 
                 &::-webkit-scrollbar {
                     width: 5px;
@@ -82,13 +83,11 @@
     }
 
     ul {
-        // position: absolute;
         gap: 10px;
         transform: translateY(20px);
+        align-self: flex-end;
+        height: 50%;
 
-        // right: 0;
-        // bottom: 0;
-        // height: 100%;
         li {
             background-color: white;
 

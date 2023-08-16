@@ -1,7 +1,24 @@
-.portfolio-wrapper{
-    min-height: 300px;
+.portfolio-wrapper {
+    min-height: 500px;
     padding: 20px 0;
-    background-color: white;
-    // background-image: repeating-linear-gradient(11deg, rgba(222, 115, 115, 0.25), rgba(255, 255, 255, 0.45) 1px, transparent 0px, transparent 4px);
-}
+    background-color: $black;
+    color: $cream;
+    font-size: 50px;
+    font-family: Couture;
 
+    .gallery {
+        display: grid;
+        // grid-auto-flow: column;
+        // grid-template: auto 1fr / auto;
+        // grid-template-rows: 1fr 1fr;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+        gap: 20px;
+
+        .item {
+            background-color: $light-black;
+            padding: 20px;
+            border-radius: 14px;
+        }
+    }
+}
