@@ -14,6 +14,10 @@
             // font-size: 6.25em;
             font-size: 6vw;
             color: $black;
+
+            @include for-mobile-layout {
+                font-size: 14vw;
+            }
         }
     }
 
@@ -25,4 +29,6 @@
         z-index: -1;
         object-fit: cover;
     }
+
+
 }
