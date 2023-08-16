@@ -29,4 +29,12 @@
         object-fit: cover;
         filter: contrast(0);
     }
+
+    @include for-mobile-layout {
+        flex-direction: column;
+
+        h2 {
+            font-size: 10vw;
+        }
+    }
 }

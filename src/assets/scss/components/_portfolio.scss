@@ -1,18 +1,18 @@
 .portfolio-wrapper {
-    min-height: 500px;
+    min-height: 700px;
     padding: 20px 0;
     background-color: $black;
     color: $cream;
     font-size: 50px;
     font-family: Couture;
 
+    h2 {
+        margin-bottom: 20px;
+    }
+
     .gallery {
         display: grid;
-        // grid-auto-flow: column;
-        // grid-template: auto 1fr / auto;
-        // grid-template-rows: 1fr 1fr;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         gap: 20px;
 
         .item {
