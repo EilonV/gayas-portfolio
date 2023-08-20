@@ -1,8 +1,8 @@
 import img from '../../src/assets/images/spray.jpg'
 
 export const About = () => {
-    return <section id='about' className="about-wrapper">
-        <div className="about flex">
+    return <section id='about' className="about-wrapper" data-aos="fade-up" data-aos-delay="300" data-aos-duration="700">
+        <div className="about flex" >
             <div className="scope flex column ">
                 <h2>ALL ABOUT</h2>
                 <p>
