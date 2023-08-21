@@ -6,6 +6,7 @@
         position: relative;
         width: 100%;
         gap: 20px;
+        padding: 20px 0;
 
         @include for-mobile-layout {
             flex-direction: column;
@@ -20,7 +21,6 @@
             gap: 10px;
             height: 200px;
 
-            // height: 200px;
             * {
                 height: 100%;
                 width: 100% !important;
@@ -34,13 +34,10 @@
             background-color: transparent;
             border-radius: 14px;
             box-shadow: inset 20px 20px 60px #b3c9d9,
-                inset -20px -20px 60px #c1ccd5;
-            // box-shadow: inset 20px 20px 60px #d1c19e,
-            //     inset -20px -20px 60px #ffffd6;
+                inset -20px -20px 60px #c1ccd55a;
             padding: 5px 10px;
             font-family: Quicksand;
             font-size: 18px;
-
             font-weight: 700;
 
             &::placeholder {
@@ -72,7 +69,6 @@
 
                 &::-webkit-scrollbar-thumb {
                     border-radius: 20px;
-                    // background: #555;
                 }
             }
 
@@ -95,9 +91,14 @@
 
     ul {
         gap: 10px;
-        transform: translateY(20px);
+        transform: translateY(40px);
         align-self: flex-end;
         height: 50%;
+
+        @include for-mobile-layout {
+            transform: translateY(40px);
+            // height: 100px;
+        }
 
         li {
             background-color: white;

@@ -4,7 +4,6 @@ export const ProjectList = (props) => {
 
     const changeProject = (e) => {
         const modal = document.querySelector('.gallery-modal')
-        console.log(modal.classList);
         modal.classList.remove('active')
         setTimeout(() => {
             props.setProject(projects[e.target.id])
