@@ -13,7 +13,7 @@ export const ProjectList = (props) => {
 
     return projects.map((project) => {
         return <div className="project" id={project.num} key={project.title} onClick={changeProject}>
-            <p>{project.img}</p>
+            <p>{project.title}</p>
         </div>
     })
 }

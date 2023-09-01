@@ -1,34 +1,34 @@
-.hero {
-    font-family: Couture;
-    width: 100%;
-    height: 100vh;
+// .hero {
+//     font-family: Couture;
+//     width: 100%;
+//     height: 100vh;
 
-    .header-wrapper {
-        align-self: baseline;
-        width: 100%;
-        mix-blend-mode: difference;
-        background-color: white;
-        filter: invert(10%);
+//     .header-wrapper {
+//         align-self: baseline;
+//         width: 100%;
+//         mix-blend-mode: difference;
+//         background-color: white;
+//         filter: invert(10%);
 
-        h1 {
-            // font-size: 6.25em;
-            font-size: 6vw;
-            color: $black;
+//         h1 {
+//             // font-size: 6.25em;
+//             font-size: 6vw;
+//             color: $black;
 
-            @include for-mobile-layout {
-                font-size: 14vw;
-            }
-        }
-    }
+//             @include for-mobile-layout {
+//                 font-size: 14vw;
+//             }
+//         }
+//     }
 
-    video {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        z-index: -1;
-        object-fit: cover;
-    }
+//     video {
+//         position: absolute;
+//         width: 100%;
+//         height: 100%;
+//         top: 0;
+//         z-index: -1;
+//         object-fit: cover;
+//     }
 
 
-}
+// }

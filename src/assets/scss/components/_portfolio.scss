@@ -11,20 +11,79 @@
 
     .gallery-wrapper {
         gap: 20px;
+
+        p:not(.gallery-modal p) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            // font-size: 1.5vw;
+
+            width: 100%;
+
+            height: 100%;
+            word-break: break-word;
+            // text-align: center;
+            // white-space: wrap;
+
+        }
+
+        @include for-tablet-layout {
+            flex-direction: column;
+
+            .gallery {
+                width: 100%;
+            }
+
+            .gallery-modal {
+                width: 100%;
+                flex-direction: column;
+                margin-bottom: 20px;
+
+
+            }
+
+            .swiper-wrapper {
+                max-width: 100px;
+                margin: 0;
+
+
+
+                img {
+                    width: 100%;
+                }
+            }
+
+        }
+
+
     }
 
     .gallery {
         display: grid;
         grid-template-columns: repeat(2, minmax(20px, 1fr));
         gap: 20px;
-        width: 20%;
-        word-break: break-all;
+        width: 30%;
 
+        // height: 20%;
+        // word-break: break-all;
+        // aspect-ratio: 1/1;
         .project {
-            overflow: hidden;
             background-color: $light-black;
             padding: 20px;
             border-radius: 14px;
+            font-size: 1.7vw;
+
+            @include for-tablet-layout {
+                p {
+                    font-size: 4vw;
+                }
+            }
+
+            p {
+                // width: 100%;
+                // overflow-wrap: break-word
+                // font-size: 2vw;
+            }
 
             * {
                 pointer-events: none;
@@ -38,22 +97,102 @@
     }
 
     .gallery-modal {
-        width: 80%;
+        width: 70%;
         background-color: $light-black;
         padding: 20px;
         border-radius: 14px;
-        word-break: break-all;
+        word-break: break-word;
+        gap: 20px;
+
+        // overflow: hidden;
+
+        h3 {
+            font-size: 2vw;
+            word-break: break-word;
+            margin-bottom: 10px;
+
+            @include for-tablet-layout {
+                font-size: 5vw;
+
+            }
+        }
 
         &.active {
-            * {
+            *>.mySwiper {
                 animation: appear 0.7s 1 forwards ease-in-out;
             }
         }
 
         p {
-            word-break: break-all;
+            word-break: break-word;
             font-size: 18px;
         }
+
+        .project-desc {
+            width: 30%;
+
+            @include for-tablet-layout {
+                width: 100%;
+            }
+        }
+
+        iframe {
+            width: 100%;
+            border: none;
+            border-radius: 14px;
+        }
+
+        .swiper {
+            width: 100%;
+
+            // .iphone-border {
+            //     width: 50%;
+            // }
+
+
+            img {
+                width: 100%;
+                height: 100%;
+                padding: 0px 1px;
+                object-fit: contain;
+            }
+
+            .swiper-pagination {
+                bottom: -10px;
+
+                .swiper-pagination-bullet {
+                    background-color: $white;
+                    margin: 0 1px;
+                    transition: 0.2s;
+                }
+
+                .swiper-pagination-bullet-active {
+                    background-color: $blue;
+                }
+            }
+
+            .swiper-button-prev,
+            .swiper-button-next {
+                transition: 0.2s;
+                background-color: $light-black;
+                width: 40px;
+                height: 70px;
+                border-radius: 14px;
+                color: $blue;
+
+                @include for-mobile-layout {
+                    opacity: 0.7;
+                    width: 30px;
+                    height: 30px;
+
+                    // height: 20px;
+                    &::after {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+
 
     }
 }
@@ -68,4 +207,63 @@
         transform: translateY(0px);
         opacity: 1;
     }
+}
+
+.iphone {
+    height: 20px;
+    position: absolute;
+    width: 100% !important;
+    z-index: 2;
+    object-fit: contain;
+}
+
+.iphone-wrapper {
+    background-image: url('../../images/iphone\ border.png');
+    position: relative;
+    pointer-events: none;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 600px;
+
+    .swiper {
+        z-index: -1;
+        height: 100%;
+        width: 90% !important;
+        pointer-events: all;
+        border-radius: 30px !important;
+
+        .swiper-button-prev,
+        .swiper-button-next {
+            transform: scale(0.5);
+
+            @include for-mobile-layout {
+                transform: scale(1);
+            }
+
+        }
+
+        .swiper-button-next {
+            right: 0;
+
+            @include for-mobile-layout {
+                right: 5px;
+            }
+        }
+
+        .swiper-button-prev {
+            left: 0;
+
+            @include for-mobile-layout {
+                left: 5px;
+            }
+        }
+
+
+        .swiper-pagination {
+            bottom: 15px !important;
+        }
+    }
+
 }

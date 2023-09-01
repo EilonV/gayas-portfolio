@@ -7,9 +7,10 @@
     .about {
         gap: 50px;
         justify-self: center;
-        @include for-mobile-layout {
+
+        @include for-tablet-layout {
             flex-direction: column;
-    
+
             h2 {
                 font-size: 10vw;
             }

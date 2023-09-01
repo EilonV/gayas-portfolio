@@ -19,7 +19,11 @@
         @include layoutGTC($tablet-breakpoint);
     }
 
-    @include for-wide-layout {
+    // @include for-wide-layout {
+    //     @include layoutGTC($desktop-breakpoint);
+    // }
+
+    @include for-wider-layout {
         @include layoutGTC($wide-dekstop-breakpoint);
     }
 }
