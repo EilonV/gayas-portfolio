@@ -3,7 +3,6 @@ import { Pagination, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import iphone from '../assets/images/iphone border.png'
 
 export const ProjectDetails = (project) => {
     return <div className="gallery-modal flex active">
